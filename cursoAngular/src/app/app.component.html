@@ -17,3 +17,22 @@
     <p *ngIf="curso.duracion === 120">Tres semanas</p>
   </li>
 </ul>
+
+<button (click)="value = 1">select - 1</button>
+<button (click)="value = 2">select - 2</button>
+<button (click)="value = 3">select - 3</button>
+<h5>You selected : {{ value }}</h5>
+Directivas Estructurales: NgSwitch
+<hr />
+<div [ngSwitch]="value">
+  <div *ngSwitchCase="1">
+    1. Template - <b>{{ value }}</b>
+  </div>
+  <div *ngSwitchCase="2">
+    2. Template - <b>{{ value }}</b>
+  </div>
+  <div *ngSwitchCase="3">
+    3. Template - <b>{{ value }}</b>
+  </div>
+  <div *ngSwitchDefault>Default Template</div>
+</div>
