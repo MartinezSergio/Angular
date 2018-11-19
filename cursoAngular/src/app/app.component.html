@@ -15,6 +15,8 @@
     <p *ngIf="curso.duracion === 8; else: elseBlock">Jornada completa</p>
     <ng-template #elseBlock>Media Jornada</ng-template>
     <p *ngIf="curso.duracion === 120">Tres semanas</p>
+    <p>{{ curso.precio | currency: "EUR":true }}</p>
+    <p>{{ curso.fecha | date: "dd-MM-yyyy" }}</p>
   </li>
 </ul>
 

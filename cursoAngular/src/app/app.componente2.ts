@@ -1,22 +1,15 @@
-@Component ({
-  selector: 'selector-dos',
-  templateUrl: './app.componente.html',
-  styleUrls: ['./style.css']
-})
-
-
-getCSSClasses(modo: string) {
+function getCSSClasses(modo: string) {
   let cssClasses;
-  if(modo == 'noche') {
+  if (modo == "noche") {
     cssClasses = {
-      'one': true,
-      'two': true
-    }
+      one: true,
+      two: true
+    };
   } else {
     cssClasses = {
-      'two': true,
-      'four': false
-    }
+      two: true,
+      four: false
+    };
   }
   return cssClasses;
 }
