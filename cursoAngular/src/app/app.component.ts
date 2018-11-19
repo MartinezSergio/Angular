@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'cursoAngular';
+  curso = {'id': 1, 'nombre': 'Beca Java', 'duracion': 120};
 }
