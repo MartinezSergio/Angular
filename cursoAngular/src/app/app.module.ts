@@ -7,7 +7,7 @@ import { MultiplicadorPipe } from './multiplicador.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, MultiplicadorPipe
   ],
   imports: [
     BrowserModule
