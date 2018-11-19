@@ -1,6 +1,18 @@
 <!--The content below is only a placeholder and can be replaced.-->
+
+<!--
 <div style="text-align:center"></div>
   <h1>{{curso.nombre}}</h1>
   <p>Duracion: </p><strong>{{curso.duracion}}</strong> horas
 </div>
+-->
+
+<h1>{{titulo}}</h1>
+  <ul>
+    <li *ngFor="let curso of cursos">
+      <h2>{{curso.nombre}}</h2>
+      <p>{{curso.descripcion}}</p>
+      <p>{{curso.duracion}}</p>
+    </li>
+  </ul>
 

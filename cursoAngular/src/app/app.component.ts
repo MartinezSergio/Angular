@@ -4,8 +4,15 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styles: []
+
 })
+
+
 export class AppComponent {
   title = 'cursoAngular';
-  curso = {'id': 1, 'nombre': 'Beca Java', 'duracion': 120};
+  cursos = [
+    {'id': 1, 'nombre': 'Beca Java', 'duracion': 120},
+    {'id': 2, 'nombre': 'Beca Angular', 'duracion': 16},
+    {'id': 3, 'nombre': 'Beca Java Spring', 'duracion': 8}
+];
 }
