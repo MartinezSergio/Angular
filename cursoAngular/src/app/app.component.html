@@ -12,7 +12,9 @@
     <li *ngFor="let curso of cursos">
       <h2>{{curso.nombre}}</h2>
       <p>{{curso.descripcion}}</p>
-      <p>{{curso.duracion}}</p>
+      <p *ngIf="curso.duracion < 8">Media jornada</p>
+      <p *ngIf="curso.duracion === 8">Jornada completa</p>
+      <p *ngIf="curso.duracion === 120">Tres semanas</p>
     </li>
   </ul>
 
