@@ -1,3 +1,5 @@
+
+/*
 @Component ({
   selector: 'selector-dos',
   templateUrl: './app.componente.html',
@@ -20,3 +22,4 @@ function getCSSClasses(modo: string) {
   }
   return cssClasses;
 }
+*/
