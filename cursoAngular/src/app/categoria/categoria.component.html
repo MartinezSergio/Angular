@@ -1,3 +1,10 @@
-<p>
-  categoria works!
-</p>
+<p>categoria works!</p>
+<div *ngFor="let categoria of envioDatos">
+  <ul>
+    <li>
+      {{ categoria.id }}: {{ categoria.nombre }}  <button (click)="pulsar(categoria.id)">VER +</button>
+    </li>
+  </ul>
+</div>
+
+
