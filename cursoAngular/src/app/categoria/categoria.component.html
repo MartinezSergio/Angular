@@ -2,7 +2,7 @@
 <div *ngFor="let categoria of envioDatos">
   <ul>
     <li>
-      {{ categoria.id }}: {{ categoria.nombre }}  <button (click)="pulsar(categoria.id)">VER +</button>
+      {{ categoria.id }}: {{ categoria.nombre }}  <button (click)="retornaUnaCategoria(categoria.id)">VER +</button>
     </li>
   </ul>
 </div>

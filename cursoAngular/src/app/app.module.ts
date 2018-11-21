@@ -6,8 +6,12 @@ import { AppComponent } from "./app.component";
 import { MultiplicadorPipe } from "./multiplicador.pipe";
 import { LoggerComponentComponent } from "./logger-component/logger-component.component";
 import { TracerComponent } from "./tracer/tracer.component";
-import { HttpClientModule } from "@angular/common/http";
-import { CategoriaComponent } from './categoria/categoria.component';
+import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
+import { CategoriaComponent } from "./categoria/categoria.component";
+
+import { FormsModule} from "@angular/forms";
+import { FormDemoComponent } from './form-demo/form-demo.component';
+import { RemoteInterceptorService } from "./services/remote-interceptor.service";
 
 @NgModule({
   declarations: [
@@ -15,10 +19,19 @@ import { CategoriaComponent } from './categoria/categoria.component';
     MultiplicadorPipe,
     LoggerComponentComponent,
     TracerComponent,
-    CategoriaComponent
+    CategoriaComponent,
+    FormDemoComponent
   ],
-  imports: [BrowserModule, HttpClientModule],
-  providers: [],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    FormsModule
+  ],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: RemoteInterceptorService,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

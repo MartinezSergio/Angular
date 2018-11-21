@@ -4,6 +4,7 @@ import { Component, OnInit } from "@angular/core";
 import { RemoteDataService } from "../services/remote-data.service";
 import { Categoria } from "../models/categoria";
 import { Observable } from "rxjs";
+import { interval } from "rxjs";
 
 @Component({
   selector: "app-categoria",
@@ -15,6 +16,8 @@ export class CategoriaComponent implements OnInit {
   public data1: Observable<Categoria>;
   public envioDatos;
 
+  contador = interval(2000);
+
 
   constructor(public remote: RemoteDataService) {}
 
@@ -24,9 +27,13 @@ export class CategoriaComponent implements OnInit {
     this.data.subscribe(arrayData => {
       this.envioDatos = arrayData;
     });
-  }
+/*
+    this.contador.subscribe(segundo =>{
+      console.log(`Estamos en el segundo ${segundo} del interval`);
+    });
+  */}
 
-  pulsar(id: number) {
+  retornaUnaCategoria(id: number) {
     this.data1 = this.remote.retornarDataSoloUno(id);
     this.data1.subscribe(arrayData => {
       console.log(arrayData.id);
